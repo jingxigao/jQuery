@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="jquery-3.3.1.min.js"></script>
+</head>
+<body>
+    <script>
+        //设置属性  方式一
+        $(function () {
+            var link11=$('<a>',{
+                text:"百度1",
+                href:'http://www.baidu.com',
+                target:"_blank",
+                title:'go to baidu',
+
+            });
+            link11.appendTo('body');
+            // console.log(link11);
+            //设置属性 方式二 利用attr属性方法设置
+            var link22=$("<a>百度2</a>").attr({
+                href:'http://www.baidu.com',
+                target:"_blank",
+                title:'go to baidu',
+            })
+            link22.appendTo('body');
+
+
+        });
+    </script>
+
+</body>
+</html>
