@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>title</title>
+    <script src="jquery-1.12.1.js"></script>
+    <script>
+        // 最慢
+        $(window).load(function () {
+            console.log("页面加载了1");
+        });
+        //快
+        $(document).ready(function () {
+            console.log("页面加载了2");
+        });
+        jQuery(function () {
+            console.log("页面加载了3");
+        });
+        $(function () {
+            console.log("页面加载了4");
+        });
+    </script>
+</head>
+<body>
+<input type="button" value="显示效果" id="btn"/>
+</body>
+</html>
