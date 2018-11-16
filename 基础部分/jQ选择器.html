@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="jquery-1.12.1.js"></script>
+    <script>
+        $(function () {
+            $('#btn').click(function () {
+//本身代码没有循环操作,jQuery中内部帮助我们循环操作的----->隐式迭代
+                $('p').text('ppp');
+            })
+        });
+    </script>
+</head>
+<body>
+<input type="button" value="显示效果" id="btn"/>
+<p>p1</p>
+<p>p2</p>
+<p>p3</p>
+<p>p4</p>
+<p>p5</p>
+
+</body>
+</html>
