@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>title</title>
+    <style>
+        div {
+            width: 300px;
+            height: 200px;
+            background-color: green;
+        }
+
+        p {
+            width: 100px;
+            height: 30px;
+            background-color: red;
+            cursor: pointer;
+        }
+    </style>
+    <script src="jquery-1.12.1.js"></script>
+    <script>
+        $(function () {
+            $('#btn').click(function () {
+                $('<p>这是一个p~</p>').appendTo($('#dv'));
+                $('#dv').delegate('p','click',function () {
+                   alert('我是p');
+                });
+            });
+            $('#btn2').click(function () {
+                $('<p>这是一个p~</p>').appendTo($('#dv'));
+                // $("#dv>p").click(function () {
+                //     alert('p被点击');
+                // });
+            });
+        });
+    </script>
+</head>
+<body>
+<input type="button" value="绑定事件" id="btn"/>
+<input type="button" value="绑定事件" id="btn2"/>
+<div id="dv"></div>
+
+</body>
+</html>
