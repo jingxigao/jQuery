@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div {
+            width: 300px;
+            height: 200px;
+            border: 1px solid red;
+        }
+    </style>
+    <script src="jquery-1.12.1.js"></script>
+    <script>
+        $(function () {
+            //方式1：点击一个按钮,创建一个按钮 ：会创建多个
+            // $('#btn').click(function () {
+            //     var btn2Obj=$("<input type='button' value='按钮'>");
+            //     $(btn2Obj).appendTo($('#dv'));
+            // });
+            //方式2：只创建一个
+            $('#btn').click(function () {
+               $('#dv').html("<input type='button' value='按钮'>");
+            });
+
+        });
+    </script>
+</head>
+<body>
+<input type="button" value="创建一个按钮" id="btn">
+<div id="dv"></div>
+</body>
+</html>
