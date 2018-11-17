@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div{
+            width: 200px;
+            height: 100px;
+            border: 2px solid red;
+        }
+    </style>
+    <script src="jquery-1.12.1.js"></script>
+    <script>
+        $(function () {
+           $('#btn').click(function () {
+               // 清空div内部内容
+               // $('#dv').html('');
+               // $('#dv').empty();
+               // 不是清空，而是直接删除div元素
+               $('#dv').remove();
+           });
+        });
+    </script>
+</head>
+<body>
+<input type="button" value="移除元素" id="btn">
+<div id="dv">
+    <p>我是p</p>
+    <span>我是span</span>
+</div>
+</body>
+</html>
