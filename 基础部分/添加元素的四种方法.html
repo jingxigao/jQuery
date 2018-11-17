@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div {
+            width: 300px;
+            height: 200px;
+            border: 1px solid red;
+        }
+    </style>
+    <script src="jquery-1.12.1.js"></script>
+    <script>
+$(function () {
+   $('#btn').click(function () {
+       $('#dv').prepend($("<span>this is span</span>"));
+       // $("<span>this is span</span>").appendTo($('#dv'));
+       // $('#dv').before($("<span>this is span</span>"));
+       // $('#dv').after($("<span>this is span</span>"));
+   });
+});
+    </script>
+</head>
+<body>
+<input type="button" value="创建一个按钮" id="btn"/>
+<div id="dv">
+    <p>这是一个p</p>
+</div>
+<p>这是div后面的第一个子元素</p>
+</body>
+</html>
